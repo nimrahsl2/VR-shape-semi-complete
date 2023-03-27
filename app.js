@@ -29,7 +29,7 @@ function addShape( shape ) {
       break;
     case "cylinder":
      geometry = new THREE.CylinderGeometry();
-     material = new THREE.MeshBasicMaterial( { color: 0xffff00, wireframe:true } );
+     material = new THREE.MeshBasicMaterial( { color: 0xffff00 } );
      break;
     case "torus":
       geometry = new THREE.TorusGeometry();
@@ -44,8 +44,8 @@ function addShape( shape ) {
       material = new THREE.MeshBasicMaterial( { color: 0x00ff00 } );
       break;
     case "cone":
-      geometry = new THREE.ConeGeometry();
-      material = new THREE.MeshBasicMaterial( { color: 0x0000ff } );
+      geometry = new THREE.ConeGeometry( 5, 20, 32 );
+      material = new THREE.MeshBasicMaterial( {color: 0xffff00} );
       break;
     default:
       console.error( "Invalid shape: " + shape );
